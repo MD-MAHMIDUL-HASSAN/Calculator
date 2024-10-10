@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Calculator</title>
+    <link
+            rel="icon"
+            src="mathematics.png"
+            type="image/png">
+    <link rel="stylesheet" href="calculator.css">
+</head>
+<body>
+    <div id="app">
+        <div class="navbar">
+            <div>
+                <img src="minimize.png" alt="Minimize" class="logo" style="background-color: white; height: 60%;">
+            </div>
+            <div>
+                <img src="math.png" alt="Math Functions" class="logo">
+                <img src="Box4.png" alt="Box" class="logo">
+                <img src="3dot-menu.png" alt="Menu" class="logo">
+            </div>
+        </div>
+        <div class="calculator">
+            <div class="display">
+                <input id="input" type="text" disabled>
+                <input id="answer" type="text" disabled>
+            </div>
+            <div class="buttons">
+                <button class="clear">AC</button>
+                <button class="operator" value="/100">%</button>
+                <button class="del">Del</button>
+                <button class="operator" value="/">÷</button>
+                <button class="number" value="7">7</button>
+                <button class="number" value="8">8</button>
+                <button class="number" value="9">9</button>
+                <button class="operator" value="*">×</button>
+                <button class="number" value="4">4</button>
+                <button class="number" value="5">5</button>
+                <button class="number" value="6">6</button>
+                <button class="operator" value="-">-</button>
+                <button class="number" value="1">1</button>
+                <button class="number" value="2">2</button>
+                <button class="number" value="3">3</button>
+                <button class="operator" value="+">+</button>
+                <button class="number" value="00">00</button>
+                <button class="number" value="0">0</button>
+                <button class="number" value=".">.</button>
+                <button class="equal">=</button>
+            </div>
+        </div>
+    </div>
+    <script src="calculator.js"></script>
+</body>
+</html>
