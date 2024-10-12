@@ -3,30 +3,48 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Calculator</title>
-    <link
-            rel="icon"
-            src="mathematics.png"
-            type="image/png">
+    <title>Calculator</title>
+    <!-- Favicon for the page -->
+    <link rel="icon" src="mathematics.png" type="image/png">
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="calculator.css">
+
+    <!-- add img in title -->
+    <link rel="icon" href="mathematics.png" type="image/png" sizes="16x16">
+    
 </head>
 <body>
     <div id="app">
-        <!-- <div class="navbar">
-            <div>
-                <img src="minimize.png" alt="Minimize" class="logo" style="background-color: white; height: 60%;">
+        <!-- Navigation bar -->
+        <div class="navbar">
+            <div class="header">
+                
+                <img id="logo" src="mathematics.png" alt="mathematics">
+                <h1>Calculator</h1>
             </div>
-            <div>
-                <img src="math.png" alt="Math Functions" class="logo">
-                <img src="Box4.png" alt="Box" class="logo">
-                <img src="3dot-menu.png" alt="Menu" class="logo">
+            <!-- Three-dot menu icon -->
+            <div class="three-dot-icon" onclick="toggleMenu()">
+                <div class="dot"></div>
+                <div class="dot"></div>
+                <div class="dot"></div>
             </div>
-        </div> -->
+            <!-- Dropdown menu -->
+            <div class="menu" id="menu">
+                <ul>
+                    <li onclick="window.location.href='age.html'">Age Calculator</li>
+                    <li>Demo</li>
+                    <li>Demo</li>
+                </ul>
+            </div>
+        </div>
+        <!-- Calculator interface -->
         <div class="calculator">
+            <!-- Display area for input and result -->
             <div class="display">
                 <input id="input" type="text" disabled>
                 <input id="answer" type="text" disabled>
             </div>
+            <!-- Buttons for calculator operations -->
             <div class="buttons">
                 <button class="clear">AC</button>
                 <button class="operator" value="/100">%</button>
@@ -51,6 +69,7 @@
             </div>
         </div>
     </div>
+    <!-- Link to external JavaScript file -->
     <script src="calculator.js"></script>
 </body>
 </html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Age Calculator</title>
+  <link rel="stylesheet" href="calculator.css">
+  <link rel="stylesheet" href="age.css">
+  
+  <link rel="icon" href="mathematics.png" type="image/png" sizes="16x16">
+</head>
+<body>
+  <div id="app">
+  <div class="navbar">
+    <div class="header">
+        
+        <img id="logo" src="mathematics.png" alt="mathematics">
+        <h1>Age</h1>
+    </div>
+    <!-- Three-dot menu icon -->
+    <div class="three-dot-icon" onclick="toggleMenu()">
+        <div class="dot"></div>
+        <div class="dot"></div>
+        <div class="dot"></div>
+    </div>
+    <!-- Dropdown menu -->
+    <div class="menu" id="menu">
+        <ul>
+            <li onclick="window.location.href='index.html'">Calculator</li>
+            <li>Demo</li>
+            <li>Demo</li>
+        </ul>
+    </div>
+</div>
+  <div class="age-calculator-container">
+    <h1>Age Calculator</h1>
+  
+    <div class="input-container">
+      <label for="birthdate">Birth Date:</label>
+      <!-- Input for selecting birth date -->
+      <input type="date" id="birthdate" placeholder="Select your birth date" required>
+  
+      <label for="calculatedate">Calculate Age Till:</label>
+      <!-- Input for selecting the date till which age is to be calculated -->
+      <input type="date" id="calculatedate" placeholder="Select date till calculate" required>
+  
+      <!-- Button to set the calculation date to today -->
+      <button id="todayBtn">Till Today</button>
+      <!-- Button to calculate the age -->
+      <button id="calculateBtn">Calculate Age</button>
+    </div>
+  
+    <!-- Container to display the result -->
+    <div id="result" class="result"></div>
+  </div>
+</div>
+  
+  <script src="age.js"></script>
+</body>
+</html>

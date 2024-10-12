@@ -30,3 +30,15 @@ document.querySelector('.buttons').addEventListener('click', function(e) {
 function safeEval(expr) {
     return Function('"use strict";return (' + expr + ')')();
 }
+const menu = document.getElementById('menu');
+menu.style.display = 'none';
+function toggleMenu() {
+  const menu = document.getElementById('menu');
+  if (menu.style.display === 'block') {
+    menu.style.display = 'none';
+  } else {
+    menu.style.display = 'block';
+  }
+}
+
+

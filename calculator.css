@@ -1,99 +1,223 @@
-*{
+/* Reset margin and padding for all elements */
+* {
     margin: 0;
     padding: 0;
 }
-body{
+
+/* Style for the body element */
+body {
     font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #121212;
+    color: #e0e0e0;
 }
-#app{
-    position:absolute;
+
+/* Style for the main app container */
+#app {
+    position: absolute;
     height: 100dvh;
     margin: 0 50% 0 50%;
-    background: #000;
-    box-sizing : border-box;
+    background: #1e1e1e;
+    box-sizing: border-box;
     width: min(100vw, 420px);
     padding: 1%;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 15px;
+    box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.5);
 }
-.navbar{
+
+/* Style for the navigation bar */
+.navbar {
     position: absolute;
     top: 10px;
     display: flex;
     justify-content: space-between;
     width: 100%;
-    background: #000000;
+    background: #1e1e1e;
     height: 4dvh;
-    
 }
-.navbar img{
-    height: 100%;
-    margin: 1%;
+
+/* Style for the navigation bar title */
+.navbar h1 {
+    color: #007bff;
+    font-size: calc(1.5em + 1vw);
+    margin-left: 2%;
+    font-weight: 500;
+    font-family: 'Roboto', sans-serif;
+    width: 100%;
 }
-.navbar div{
+
+#logo {
+    width: 40px;
+    height: 40px;
+}
+
+/* Style for the navigation bar buttons */
+.navbar button {
+    background: #1e1e1e;
+    color: #ffffff;
+    border: none;
+    font-size: 1.5em;
+    margin-right: 1%;
+    font-weight: 400;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Hover and focus states for the navigation bar buttons */
+.navbar button:hover,
+.navbar button:focus {
+    background: #1e1e1e;
+    color: #ffffff;
+}
+
+/* Style for the navigation bar div */
+.navbar div {
     display: flex;
-    width: 30%;
     justify-content: space-between;
     box-sizing: content-box;
 }
-.calculator{
+
+/* Style for the calculator container */
+.calculator {
     position: absolute;
     bottom: 0;
     padding: 1%;
 }
-.display{
+
+/* Style for the display section of the calculator */
+.display {
     width: 100%;
     height: 20dvh;
-    background: #000000;
+    background: #1e1e1e;
 }
-.display input{
-    background-color: #000;
-    color: #fff;
+
+/* Style for the input field in the display section */
+.display input {
+    background-color: #1e1e1e;
+    color: #e0e0e0;
     width: 100%;
     height: 50%;
     text-align: right;
     font-size: 2em;
     border: none;
 }
-input:focus{
+
+/* Remove outline and border for input field on focus and active states */
+input:focus,
+input:active {
     outline: none;
     border: none;
 }
-input:active{
-    outline: none;
-}
-.buttons{
+
+/* Style for the buttons container */
+.buttons {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     height: 50vh;
     gap: 4%;
     text-align: center;
 }
-.buttons button{
+
+/* Style for the buttons */
+.buttons button {
     font-size: 1.5em;
     border: none;
     width: 100%;
     height: 100%;
-    border-radius:50px;
+    border-radius: 50px;
 }
-.number{
+
+/* Style for number buttons */
+.number {
     background: #686D76;
     color: white;
 }
-.operator, .del,.clear {
+
+/* Style for operator, delete, and clear buttons */
+.operator, .del, .clear {
     background: #373A40;
-    color: #fff;
+    color: #ffffff;
 }
-.equal{
-    background:#dc4200;
-    color: #fff;
+
+/* Style for the equal button */
+.equal {
+    background: #007bff;
+    color: #ffffff;
 }
-.number:hover{
+
+/* Hover state for the equal button */
+.equal:hover {
+    background: #0056b3;
+}
+
+/* Hover state for number buttons */
+.number:hover {
     background-color: #565a62;
 }
-.operator:hover, .del:hover, .clear:hover{
+
+/* Hover state for operator, delete, and clear buttons */
+.operator:hover, .del:hover, .clear:hover {
     background: #686D76;
+}
+
+/* Style for the three-dot icon */
+.three-dot-icon {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    top : 5px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
+/* Style for the dots in the three-dot icon */
+.dot {
+    width: 8px;
+    height: 8px;
+    background-color: #333;
+    border-radius: 50%;
+    transition: background-color 0.3s;
+}
+
+/* Style for the menu */
+.menu {
+    display: none;
+    position: absolute;
+    color: #ffffff;
+    top: 50px;
+    right: 10px;
+    background-color: #1e1e1e;
+    border: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Visible state for the menu */
+.menu.visible {
+    display: block;
+}
+
+/* Style for the menu list */
+.menu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Style for the menu list items */
+.menu ul li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+/* Hover state for the menu list items */
+.menu ul li:hover {
+    background-color: #373A40;
 }
